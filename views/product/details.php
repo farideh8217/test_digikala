@@ -72,8 +72,8 @@
 
         <div class="gallery">
 
-            <img id="zoomproduct" src="public/images/products/<?= $productInfo['id'] ?>/product_350.jpg"
-                 data-zoom-image="public/images/products/<?= $productInfo['id'] ?>/product.jpg">
+            <img id="zoomproduct" src="public/images/products/<= $productInfo['id'] ?>/product_350.jpg"
+                 data-zoom-image="public/images/products/<= $productInfo['id'] ?>/product.jpg">
 
             <script>
 
@@ -230,7 +230,7 @@
 
     <div class="left">
         <div class="title">
-            <?= $productInfo['title']; ?>
+            <= $productInfo['title']; ?>
             <div class="stars textcenter">
                 <div class="gray">
                     <div class="red"></div>
@@ -252,15 +252,15 @@
 
 
             <ul class="colors">
-                <?php
+                <=php
                     $all_colors = $productInfo['all_colors'];
                     foreach ($all_colors as $color) {
                 ?>
                     <li>
-                        <span data-id="<?= $color['id']; ?>" class="circle" style="background: <?= $color['hex']; ?>;"></span>
-                        <?= $color['title']; ?>
+                        <span data-id="<= $color['id']; ?>" class="circle" style="background: <= $color['hex']; ?>;"></span>
+                        <= $color['title']; ?>
                     </li>
-                <?php  } ?>
+                <=php  } ?>
 
             </ul>
 
@@ -335,12 +335,12 @@
                     </span>
 
                 <ul>
-                    <?php
+                    <=php
                             $all_garantee = $productInfo['all_garantee'];
                             foreach ($all_garantee as $garantee) {
                             ?>
-                        <li data-id="<?= $garantee['id']; ?>"><?= $garantee['title']; ?></li>
-                        <?php  } ?>
+                        <li data-id="<= $garantee['id']; ?>"><= $garantee['title']; ?></li>
+                        <=php  } ?>
 
 
 
@@ -394,7 +394,7 @@
                         قیمت:
                     </span>
                     <span class="yekan" style="font-size:11pt;text-decoration: line-through;">
-<?= $productInfo['price']; ?>
+<= $productInfo['price']; ?>
                     </span>
                      <span class="yekan" style="font-size: 9pt;">
 تومان
@@ -405,7 +405,7 @@
                         تخفیف
                     </span>
                     <span class="discount_left">
-                        <?= $productInfo['price_discount']; ?>
+                        <= $productInfo['price_discount']; ?>
                         تومان
                     </span>
                     </span>
@@ -469,7 +469,7 @@
                         قیمت برای شما:
                     </span>
                     <span class="yekan" style="font-size: 13.5pt;color:#0f0;">
-  <?= $productInfo['price_total']; ?>
+  <= $productInfo['price_total']; ?>
                     </span>
                     <span class="yekan" style="font-size: 9pt;">
 تومان
@@ -495,7 +495,7 @@
 
                     var color=$('.colors').find('.circle.active').attr('data-id');
                     console.log(garantee_selected);
-                    var url = '<?= URL ?>product/addtobasket/<?= $productInfo['id'] ?>/'+color+'/'+garantee_selected;
+                    var url = '<= URL ?>product/addtobasket/<= $productInfo['id'] ?>/'+color+'/'+garantee_selected;
                     var data = {};
 
                     $.post(url, data, function (msg) {

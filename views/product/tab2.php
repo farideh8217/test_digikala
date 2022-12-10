@@ -39,7 +39,7 @@
 </style>
 
 
-<?php
+<=php
 $fanni = $data[0];
 
 foreach ($fanni as $attr_parent) {
@@ -48,13 +48,13 @@ foreach ($fanni as $attr_parent) {
 
 
     <h4>
-        <?= $attr_parent['title'] ?>
+        <= $attr_parent['title'] ?>
     </h4>
 
-    <?php  foreach ($children as $child) { ?>
+    <=php  foreach ($children as $child) { ?>
         <div class="row">
             <div class="right">
-                <?= $child['title'] ?>
+                <= $child['title'] ?>
             </div>
             <div class="left">
                 <php 
@@ -71,9 +71,9 @@ foreach ($fanni as $attr_parent) {
             </div>
         </div>
 
-    <?php  } ?>
+    <=php  } ?>
 
 
-<?php  } ?>
+<=php  } ?>
 
 

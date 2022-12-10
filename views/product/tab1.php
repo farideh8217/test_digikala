@@ -1,6 +1,6 @@
 <div class="itemcontainer">
 
-    <?php
+    <=php
     $naghd = $data[0];
 
     foreach ($naghd as $row) {
@@ -10,17 +10,17 @@
             <h4>
                 <i></i>
                 <span>
-<?= $row['title']; ?>
+<= $row['title']; ?>
                     </span>
             </h4>
 
             <div class="description">
-                <?= $row['descroption']; ?>
+                <= $row['descroption']; ?>
             </div>
 
         </div>
 
-    <?php } ?>
+    <=php } ?>
 
 
 </div>

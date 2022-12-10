@@ -11,29 +11,29 @@
         </div>
         <div class="sliderscroll_main">
             <ul>
-                <?php
+                <=php
                 $result=$data[4];
                 foreach ($result as $row){
                 ?>
 
                 <li>
-                    <a href="<?= URL ?>product/index/<?= $row['id']; ?>">
+                    <a href="<= URL ?>product/index/<= $row['id']; ?>">
 
-                        <img style="width: 150px;" src="public/images/products/<?= $row['id']; ?>/product_220.jpg">
+                        <img style="width: 150px;" src="public/images/products/<= $row['id']; ?>/product_220.jpg">
 
                         <img src="public/images/exclusive-blue.png">
 
                         <p class="yekan fontsm">
-                            <?= $row['title']; ?>
+                            <= $row['title']; ?>
                         </p>
 
                         <p class="yekan price">
-                            <?= $row['price']; ?>
+                            <= $row['price']; ?>
                         </p>
 
                     </a>
                 </li>
-                <?php  } ?>
+                <=php  } ?>
             </ul>
 
         </div>
