@@ -29,4 +29,11 @@ class model{
         }
         return $option_new;
     }
+
+    function takhfif($price,$discount)
+    {
+        $takhfif_koli = ($price*$discount)/100;
+        $gheymat_nahaee = $price-$takhfif_koli;
+        return[$takhfif_koli,$gheymat_nahaee];
+    }
 }

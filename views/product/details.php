@@ -230,7 +230,7 @@
 
     <div class="left">
         <div class="title">
-            <= $productInfo['title']; ?>
+            <?= $productInfo['title']; ?>
             <div class="stars textcenter">
                 <div class="gray">
                     <div class="red"></div>
