@@ -2,7 +2,8 @@
 class myapp{
     public $controller='index';
     public $method = 'index';
-    public $param =[];
+    public $param = [];
+
     public function __construct()
     {
         if(isset($_GET["url"])) {
@@ -14,7 +15,7 @@ class myapp{
                 $this->method = $url[1];
                 unset($url[1]);
             }
-            $param = array_values($url);
+            $this->param = array_values($url);
         }
             $controllerurl = "controller/".$this->controller.".php";
             if(file_exists($controllerurl)) {
@@ -23,7 +24,7 @@ class myapp{
                 $obj->model($this->controller);
 
                 if(method_exists($obj,$this->method)) {
-                    call_user_func_array([$obj,$this->method],$this->param);
+                    call_user_func_array([$obj,$this->method], $this->param);
                 }
             }
     }

@@ -5,10 +5,11 @@ class model_product extends model {
         parent::__construct();
     }
     function product_info($id) {
-        $sql = "SELECT * FROM tbl_product WHERE id=:id";
+        $sql = "SELECT * FROM tbl_product WHERE id= :id";
         $stmt = self::$conn->prepare($sql);
+        $stmt->bindParam(":id",$id);
         $stmt->execute();
-        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 }
