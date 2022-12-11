@@ -1,4 +1,4 @@
-<=php
+<?php
 $option=Model::get_option();//چون از نوع استاتیک هست نیازی نیست آبجکت بسازیم
 ?>
 <style>
@@ -70,7 +70,7 @@ $option=Model::get_option();//چون از نوع استاتیک هست نیاز�
                 <li>
                     <a class="yekan">
 
-                        <= $option['tel']; ?>
+                        <?= $option['tel']; ?>
 
                         <i style="background-position: -397px -420px; "></i>
 
@@ -85,7 +85,7 @@ $option=Model::get_option();//چون از نوع استاتیک هست نیاز�
                 </li>
                 <li>
                     <a class="yekan">
-                        <= $option['email']; ?>
+                        <?= $option['email']; ?>
                         <i style="background-position: -321px -420px; "></i>
 
                     </a>

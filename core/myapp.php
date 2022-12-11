@@ -20,6 +20,8 @@ class myapp{
             if(file_exists($controllerurl)) {
                 require ($controllerurl);
                 $obj = new $this->controller;
+                $obj->model($this->controller);
+
                 if(method_exists($obj,$this->method)) {
                     call_user_func_array([$obj,$this->method],$this->param);
                 }

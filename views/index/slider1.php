@@ -107,22 +107,22 @@
     </span>
 
     <div id="slider_img">
-        <=php
+        <?php
         $slider1 = $data[0];
         foreach ($slider1 as $slider) { ?>
-            <a href="<= $slider['link']; ?>" class="item">
-                <img src="<= $slider['img']; ?>">
+            <a href="<?= $slider['link']; ?>" class="item">
+                <img src="<?= $slider['img']; ?>">
             </a>
-        <=php } ?>
+        <?php } ?>
     </div>
 
     <div id="slider_navigator">
         <ul>
-            <=php foreach ($slider1 as $slider) { ?>
+            <?php foreach ($slider1 as $slider) { ?>
                 <li>
-                    <a class="yekan fontsm"><= $slider['title'] ?></a>
+                    <a class="yekan fontsm"><?= $slider['title'] ?></a>
                 </li>
-            <=php } ?>
+            <?php } ?>
         </ul>
     </div>
 
